@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ======navegacion====== */
+
+.navbar {
+    padding: 2rem;
+    background-color: #d51739;
+}
+
+
+.navbar-collapse {
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+.textoInicial{
+    color: white;
+}
+.iconoMenu{
+    padding-left: 10px ;
+}
+
+
+/*--------------------Estilos para  presentación-------------------- */
+
+
+.presentacion {
+
+    background-image: url(imagenes/banderas.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Establece una posición relativa para que los elementos hijos con 'absolute' se posicionen respecto a esta */
+    position: relative;
+    color: white;
+    min-height: 750px;
+    text-align: center;
+}
+
+/* Capa negra semitransparente que cubre toda la sección */
+.presentacion::before {
+    /* Crea un elemento pseudo ::before antes del contenido principal */
+    content: "";
+    /* Necesario para que se muestre el pseudo-elemento */
+
+    /* Posiciona la capa para cubrir toda la sección */
+    position: absolute;
+    top: 0;
+    /* Alinea la parte superior de la capa al borde superior */
+    left: 0;
+    /* Alinea el borde izquierdo de la capa */
+
+    /* Hace que la capa ocupe el 100% de la sección */
+    width: 100%;
+    height: 100%;
+
+    /* Crea un fondo negro con transparencia */
+    background: rgba(0, 0, 0, 0.5);
+    /* Negro con 50% de opacidad */
+
+    /* Coloca esta capa por debajo del contenido principal */
+    z-index: 1;
+}
+
+
+.presentacion-contenido {
+    /* Asegura que el contenido esté posicionado sobre la capa negra */
+    position: relative;
+
+    /* Coloca el contenido por encima del fondo oscuro */
+    z-index: 2;
+
+    /* Espaciado interno para que el contenido no quede pegado a los bordes */
+    padding: 3rem;
+}
+
+
+.presentacion-imagen {
+
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 20px;
+    border: 3px solid white;
+}
+
+.presentacion-contenido h2 {
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 1rem;
+}
+
+
+
+/* -----------------Estilos de la tienda-------------------- */
+
+.sobre-tienda {
+    height: 350px;
+    padding: 10px;
+}
+
+.sobre-tienda .contenedor-sobre-tienda {
+    max-width: 600px;
+    text-align: center;
+}
+
+.titulo-sobre-tienda {
+    font-size: 3rem;
+}
+
+.texto-sobre-tienda {
+    font-size: 26px;
+}
+
+/* -----------------Estilos del menu la tienda-------------------- */
+
+.menu-titulo {
+    height: auto;
+}
+
+.parte-menu {
+    padding: 50px;
+}
+
+.menu {
+    padding-bottom: 30px;
+}
+
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra ligera */
+    transition: transform 0.3s;
+    /* Efecto al pasar el mouse */
+}
+
+.card-imagen {
+    height: 200px
+}
+
+.card:hover {
+    transform: scale(1.05);
+    /* Agranda ligeramente la tarjeta */
+}
+
+
+.Menu-restaurante {
+    height: auto;
+    padding: 60px;
+}
+
+/* -----------------Estilos del contacto-------------------- */
+.contacto {
+    height: 200px;
+    padding: 80px 0;
+}
+
+.contacto .container {
+    max-width: 1100px;
+    min-height: 200px;
+    padding: 0 40px;
+}
+
+.contacto .rectangulo {
+    margin-top: -5rem;
+    background-color: #00a884;
+    box-shadow: 0px, 1px, 4px, 1px;
+}
+
+.contacto .row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.contacto .descripcion {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.contacto button {
+    color: white;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 1.25rem 2em;
+    margin: 10px;
+    border-radius: 100px;
+    transition: all 0.2s ease-in-out;
+}
+
+.contacto button:hover {
+    background-color: white;
+    color: black;
+}
+
+.contacto button i {
+    color: white;
+    font-size: 1.3rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.contacto button:hover {
+    color: black;
+}
+.description{
+    color: white;
+}
+/* -----------------Estilos del Formulario-------------------- */
+
+.formulario .w-100 {
+    max-width: 800px;
+    padding-bottom: 30px;
+}
+
+/* -----------------Estilos del Footer-------------------- */
+
+.derechos {
+    background-color: #162a5e;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.link a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.link i {
+    font-size: 1.5rem;
+}
+
+.link p {
+    margin-top: 10px;
+    font-size: 0.8rem;
+}
+
+@media screen and (max-width: 767px) {
+
+    .sobre-tienda {
+        height: 680px;
+    }
+
+    .sobre-tienda:nth-of-type(2) {
+
+        height: 450px
+    }
+
+    .contacto {
+        height: 200px;
+        padding: 60px 0;
+    }
+
+    .formulario .w-100 {
+        max-width: auto;
+        padding: 20px 20px;
+    }
+
+    .titulo-sobre-tienda{
+        padding: 0 20px;
+    }
+
+    .texto-sobre-tienda{
+        padding: 0 20px;
+        font-size: 22px;
+    }
+
+    .formulario{
+        padding: 10 20px;
+    }
+
+}
